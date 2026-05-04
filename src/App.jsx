@@ -28,7 +28,7 @@ import {
 
 const LOGOS = {
   canariasForma: "https://canariasforma.es/wp-content/uploads/2025/06/caf-logo-final-horizontal.svg",
-  nike: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
+  nike: "https://e7.pngegg.com/pngimages/838/890/png-clipart-swoosh-air-force-nike-free-nike-air-max-nike-angle-text.png",
   lopesan: "https://www.lopesan.com/documents/49789/1627587/11+COR-BLOP_LG_V_1T.jpg/acebfa19-ff6d-2b9f-433e-7bcd2f57d06d?version=3.0&t=1763540117719",
   hiperdino: "https://pinoahorro.com/_next/image?url=%2Flogos%2Flogo-hiperdino.webp&w=3840&q=75",
   fredOlsen: "https://anave.es/wp-content/uploads/2023/07/fred-olsen-logo.png",
@@ -228,7 +228,7 @@ function ExternalButton({ href, children }) {
 function MiniLogo({ brand }) {
   return (
     <a href={brand.url} target="_blank" rel="noreferrer" className="group flex items-center gap-3 rounded-2xl bg-white/80 p-3 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-      <img src={brand.logo} alt={brand.name} className="h-9 w-20 object-contain mix-blend-multiply" />
+      <img src={brand.logo} alt={brand.name} className="h-9 w-20 object-contain mix-blend-multiply" / className="max-h-16 object-contain" />
       <div className="text-left">
         <p className="text-sm font-black text-[#003d63]">{brand.name}</p>
         <p className="text-xs text-slate-500">{brand.sector}</p>
@@ -279,7 +279,7 @@ export default function App() {
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
           <div className="flex items-center gap-4">
-            <img src={LOGOS.canariasForma} alt="Canarias Forma" className="h-9 w-auto" />
+            <img src={LOGOS.canariasForma} alt="Canarias Forma" className="h-9 w-auto" / className="max-h-16 object-contain" />
             <div className="hidden text-sm font-black text-[#003d63] md:block">COMM18 · IA aplicada al Marketing Digital</div>
           </div>
           <div className="flex items-center gap-3">
@@ -303,7 +303,7 @@ export default function App() {
         <div className="absolute inset-0 opacity-25 [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:24px_24px]" />
         <Fade className="relative z-10 mx-auto max-w-6xl text-center">
           <div className="mx-auto mb-8 flex w-fit rounded-[1.7rem] border border-white/70 bg-white/85 px-10 py-6 shadow-2xl">
-            <img src={LOGOS.canariasForma} alt="Canarias Forma" className="h-20 w-auto" />
+            <img src={LOGOS.canariasForma} alt="Canarias Forma" className="h-20 w-auto" / className="max-h-16 object-contain" />
           </div>
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/15 px-5 py-3 text-sm font-bold backdrop-blur-xl">
             <Sparkles size={18} /> Presentación interactiva · Actividad 1
@@ -364,7 +364,7 @@ export default function App() {
       <Slide index={3} sectionRefs={sectionRefs}>
         <Fade className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-[0.9fr_1.1fr]">
           <Glass>
-            <img src={LOGOS.canariasForma} alt="Canarias Forma" className="mb-8 h-16 w-auto" />
+            <img src={LOGOS.canariasForma} alt="Canarias Forma" className="mb-8 h-16 w-auto" / className="max-h-16 object-contain" />
             <h2 className="text-4xl font-black text-[#003d63]">Diagnóstico rápido</h2>
             <p className="mt-5 text-lg leading-8 text-slate-700">
               Canarias Forma tiene una base digital sólida: web, Google, Instagram, Facebook y LinkedIn. La oportunidad es convertir esa presencia en una experiencia más personalizada y medible.
@@ -397,7 +397,7 @@ export default function App() {
             {brands.map((brand) => (
               <Glass key={brand.name} className="flex flex-col">
                 <div className={`mb-5 rounded-3xl bg-gradient-to-br ${brand.color} p-4`}>
-                  <img src={brand.logo} alt={brand.name} className="mx-auto h-14 w-full object-contain mix-blend-screen" />
+                  <img src={brand.logo} alt={brand.name} className="mx-auto h-14 w-full object-contain mix-blend-screen" / className="max-h-16 object-contain" />
                 </div>
                 <h3 className="text-2xl font-black text-[#003d63]">{brand.name}</h3>
                 <p className="mt-2 text-sm font-bold text-cyan-700">{brand.sector}</p>
@@ -416,7 +416,7 @@ export default function App() {
           <div className="mt-10 grid gap-5 md:grid-cols-5">
             {channelCards.map((item) => (
               <Glass key={item.title}>
-                <img src={item.icon} alt={item.title} className="mb-6 h-10 w-10" />
+                <img src={item.icon} alt={item.title} className="mb-6 h-10 w-10" / className="max-h-16 object-contain" />
                 <h3 className="text-2xl font-black text-[#003d63]">{item.title}</h3>
                 <p className="mt-5 text-sm font-black text-emerald-700">PUNTO FUERTE</p>
                 <p className="mt-2 text-slate-700">{item.strong}</p>
@@ -437,7 +437,7 @@ export default function App() {
             </div>
             {brands.map((brand, i) => (
               <div key={brand.name} className={`grid grid-cols-[1.1fr_1fr_1fr_1fr_1fr] border-t border-slate-200 ${i % 2 ? 'bg-white/60' : 'bg-cyan-50/70'}`}>
-                <div className="flex items-center gap-3 p-4"><img src={brand.logo} className="h-8 w-16 object-contain" /><b>{brand.name}</b></div>
+                <div className="flex items-center gap-3 p-4"><img src={brand.logo} className="h-8 w-16 object-contain" / className="max-h-16 object-contain" /><b>{brand.name}</b></div>
                 <div className="p-4 text-sm">{brand.name === 'Canarias Forma' ? 'Completa, mejorable en conversión' : brand.name === 'Nike' ? 'SEO + ecommerce muy fuerte' : brand.name === 'Lopesan' ? 'Reserva directa muy fuerte' : brand.name === 'Hiperdino' ? 'Compra online + tiendas' : 'Rutas, horarios y tarifas claras'}</div>
                 <div className="p-4 text-sm">{brand.google}</div>
                 <div className="p-4 text-sm">{brand.name === 'Canarias Forma' ? 'Instagram/Facebook/LinkedIn' : brand.name === 'Nike' ? 'Comunidad global' : brand.name === 'Lopesan' ? 'Visual y turístico' : brand.name === 'Hiperdino' ? 'Fidelización local' : 'Servicio y avisos'}</div>
@@ -455,7 +455,7 @@ export default function App() {
             {brands.slice(1).map((brand) => (
               <Glass key={brand.name}>
                 <div className={`mb-6 rounded-3xl bg-gradient-to-br ${brand.color} p-5`}>
-                  <img src={brand.logo} alt={brand.name} className="mx-auto h-16 w-full object-contain mix-blend-screen" />
+                  <img src={brand.logo} alt={brand.name} className="mx-auto h-16 w-full object-contain mix-blend-screen" / className="max-h-16 object-contain" />
                 </div>
                 <p className="text-sm font-black text-cyan-700">APRENDIZAJE</p>
                 <h3 className="mt-2 text-2xl font-black text-[#003d63]">{brand.name}</h3>
@@ -478,10 +478,10 @@ export default function App() {
             <Glass className="mt-8"><p className="font-black text-[#003d63]">Idea con IA:</p><p className="mt-2">Analizar opiniones, detectar dudas frecuentes y responder con un tono profesional, cercano y útil.</p></Glass>
           </div>
           <Glass className="overflow-hidden p-0">
-            <div className="flex items-center gap-4 border-b bg-white p-5"><img src={LOGOS.google} className="h-7" /><div className="flex-1 rounded-full border px-5 py-3">canarias forma cursos gratuitos</div><Search /></div>
+            <div className="flex items-center gap-4 border-b bg-white p-5"><img src={LOGOS.google} className="h-7" / className="max-h-16 object-contain" /><div className="flex-1 rounded-full border px-5 py-3">canarias forma cursos gratuitos</div><Search /></div>
             <div className="grid md:grid-cols-[1.2fr_0.8fr]">
               <div className="p-7"><p className="text-sm text-slate-500">https://canariasforma.es</p><h3 className="mt-2 text-2xl font-black text-blue-700">Canarias Forma - Cursos gratuitos</h3><p className="mt-3 text-slate-700">Formación gratuita, online y flexible para digitalización, experiencia de cliente e inteligencia artificial.</p>{['Formación Profesional', 'Gran Canaria', 'Administración y finanzas', 'Diseño'].map((x) => <div key={x} className="mt-3 rounded-xl border p-3 text-blue-700">{x}</div>)}</div>
-              <div className="border-l bg-slate-50 p-7"><img src={LOGOS.canariasForma} className="mb-5 h-10" /><h3 className="text-3xl font-black">CANARIAS FORMA</h3><div className="mt-4 flex items-center gap-2"><span className="text-3xl font-black">4.6</span><RatingStars rating="4.6" /></div><p className="mt-2 text-sm text-slate-600">Reseñas visibles = confianza antes de contactar</p>{['Sitio web', 'Cómo llegar', 'Opiniones'].map((x) => <button key={x} className="mt-4 w-full rounded-full border bg-white px-4 py-3 font-bold text-blue-700">{x}</button>)}</div>
+              <div className="border-l bg-slate-50 p-7"><img src={LOGOS.canariasForma} className="mb-5 h-10" / className="max-h-16 object-contain" /><h3 className="text-3xl font-black">CANARIAS FORMA</h3><div className="mt-4 flex items-center gap-2"><span className="text-3xl font-black">4.6</span><RatingStars rating="4.6" /></div><p className="mt-2 text-sm text-slate-600">Reseñas visibles = confianza antes de contactar</p>{['Sitio web', 'Cómo llegar', 'Opiniones'].map((x) => <button key={x} className="mt-4 w-full rounded-full border bg-white px-4 py-3 font-bold text-blue-700">{x}</button>)}</div>
             </div>
           </Glass>
         </Fade>
@@ -558,7 +558,7 @@ export default function App() {
 
       <Slide index={13} sectionRefs={sectionRefs} className="bg-gradient-to-br from-[#003d63] via-sky-700 to-cyan-600 text-white">
         <Fade className="mx-auto max-w-6xl text-center">
-          <img src={LOGOS.canariasForma} alt="Canarias Forma" className="mx-auto mb-10 h-20 rounded-3xl bg-white/90 px-8 py-4" />
+          <img src={LOGOS.canariasForma} alt="Canarias Forma" className="mx-auto mb-10 h-20 rounded-3xl bg-white/90 px-8 py-4" / className="max-h-16 object-contain" />
           <Trophy className="mx-auto mb-6 text-amber-300" size={60} />
           <h2 className="text-5xl font-black md:text-7xl">Conclusión</h2>
           <p className="mx-auto mt-6 max-w-4xl text-2xl font-semibold text-white/90">La IA puede convertir la presencia digital de Canarias Forma en una experiencia más personalizada, útil y orientada a la inscripción.</p>
