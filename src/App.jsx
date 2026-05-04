@@ -28,7 +28,7 @@ import {
 
 const LOGOS = {
   canariasForma: "https://canariasforma.es/wp-content/uploads/2025/06/caf-logo-final-horizontal.svg",
-  nike: "https://e7.pngegg.com/pngimages/838/890/png-clipart-swoosh-air-force-nike-free-nike-air-max-nike-angle-text.png",
+  nike: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
   lopesan: "https://www.lopesan.com/documents/49789/1627587/11+COR-BLOP_LG_V_1T.jpg/acebfa19-ff6d-2b9f-433e-7bcd2f57d06d?version=3.0&t=1763540117719",
   hiperdino: "https://pinoahorro.com/_next/image?url=%2Flogos%2Flogo-hiperdino.webp&w=3840&q=75",
   fredOlsen: "https://anave.es/wp-content/uploads/2023/07/fred-olsen-logo.png",
